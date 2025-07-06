@@ -42,7 +42,7 @@
             width: 50%;
             max-width: 400px;
             align-items: center;
-            margin: 10% auto;
+            margin: auto;
             padding: 20px;
             background-image: url(image/manu\ background.jpg);
             background-size: cover;
@@ -58,16 +58,19 @@
             align-items: center;
             padding: 20px;
         }
+        ::placeholder{
+            font-family: goergia;
+        }
     </style>
 </head>
 <body>
     <div>
         <form action="login.html" method="post">
             <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+            <input type="text" id="username" name="username" placeholder="Enter your username" required>
             <br><br>
             <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
         <br><br>
     <button class="submit-button">Login</button>
     </form>
