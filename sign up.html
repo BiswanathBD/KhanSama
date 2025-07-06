@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
-    <title>Create Account - KhanSama</title>
+    <title>Create Account</title>
 </head>
     <style>
-        body {
-            background-color: rgb(35, 35, 35);
-            color: rgb(86, 86, 86);
+        body {background-color: rgb(35, 35, 35);
+            background-position: right;
+            color: rgb(255, 255, 255);
         }
         .submit-button {
             display: block;
-            margin: 20px auto;
+            margin: 0px auto;
             padding: 10px 20px;
             background-color: rgb(255, 153, 0);
             color: white;
@@ -24,12 +24,12 @@
             cursor: pointer;
         }
         label {
+            text-align: left;
             color: rgb(255, 153, 0);
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 20px;
+            margin: 5px;
         }
         input{
-            width: 80%;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid rgba(0, 0, 0, 5);
@@ -37,17 +37,18 @@
             box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
             color: black;
             font-size: 18px;
-        }
-        div {
-            width: 60%;
-            max-width: 600px;
             align-items: center;
-            margin: 2% auto;
-            padding: 20px;
+        }
+        .container {
+            width: 60%;
+            max-width: 500px;
+            align-items: flex-start;
+            margin: auto;
+            padding: 10px;
             background-image: url(image/manu\ background.jpg);
             background-size: cover;
             background-position: center;
-            border: 1px solid rgb(255, 153, 0);
+            border: 1px solid rgb(0, 0, 0);
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
         }
@@ -55,8 +56,7 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            padding: 10px;
         }
         ::placeholder{
             font-family: goergia;
@@ -67,38 +67,56 @@
             background-color: rgb(255, 255, 255);
             box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
             color: black;
-            padding: 5px;
+            padding: 10px;
+            font-family: goergia;
+            font-size: 18px;
         }
-        h1 {
+        h1{
             text-align: center;
             color: rgb(255, 153, 0);
             font-size: 36px;
-            margin-top: 20px;
+        }
+        p, a{
+            text-decoration: none;
+            font-size: 18px;
         }
     </style>
 </head>
-<body>
     <H1>Create Account</H1>
-    <div>
+    <div class="container">
         <form action="signup.html" method="post">
-            <label for="First">First Name:</label>
-            <input type="text" id="First" name="First" placeholder="Enter your first name" required>
-            <br>
-            <label for="Last">Last Name:</label>
-            <input type="text" id="Last Name" name="Last Name" placeholder="Enter your last name" required>
+            <div style="display: flex; width: 100%;">
+                <div style="margin-right: 5%;">
+                    <div>
+                    <label style="margin" for="First">First Name:</label>
+                    </div>
+                    <div>
+                    <input style="width: 90%;" type="text" id="First" name="First" placeholder="Enter your first name" required>
+                    </div>
+                </div>
+            
+                <div>
+                    <div>
+                    <label for="First">First Name:</label>
+                    </div>
+                    <div style="">
+                    <input style="width: 90%;" type="text" id="First" name="First" placeholder="Enter your first name" required>
+                    </div>
+                </div>
+            </div>
             <br>
             <label for="Email">Email</label>
             <input type="email" id="Email" name="Email" placeholder="Email Address" required>
             <br>
             <label for="Phone Number">Phone Number:</label>
-            <div style="display: inline-flex; gap: 5%; width: 90%; align-items: center;">
+            <div style="display: inline-flex; gap: 10px; align-items: center;">
                 <select name="Country Code" id="Country Code">
                     <option value="+880">+880 (BD)</option>
                     <option value="+1">+1 (USA)</option>
                     <option value="+91">+91 (India)</option>
                     <!-- Add more country codes as needed -->
                 </select>
-                <input type="tel" id="Phone Number" name="Phone Number" placeholder="Enter your phone number">
+                <input style="width: 100%;" type="tel" id="Phone Number" name="Phone Number" placeholder="Enter your phone number">
             </div>
             <br>
             <label for="Address">Address:</label>
@@ -113,5 +131,31 @@
             <button class="submit-button">Sign Up</button>
         </form>
     </div>
+    <p style="text-align: center; color: white;">Have an account?
+        <a href="login.html" style="color: rgb(255, 153, 0);"><strong>Login</strong></a>
+    </p>
 </body>
+    <footer style="background-color: rgb(30, 30, 30);
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;">
+        <div style="display: flex;">
+            <div style="width: 40%; padding: 20px; text-align: right;">
+                <h2 style="color: rgb(255, 153, 0);">Contact Us</h2>
+                <hr style="border: none; height: 1px; background-color: rgb(255, 153, 0);">
+                <p>KhanSama, Dhaka, Bangladesh<br>
+                khansama.bangladesh@gmail.com <br>
+                +880 123 456 7890</p>
+            </div>
+            <div>
+                <a href="index.html">
+                    <img src="image/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div style="width: 40%; padding: 20px; text-align: left;">
+                <h2 style="color: rgb(255, 153, 0);">Follow Us</h2>
+                <hr style="border: none; height: 1px; background-color: rgb(255, 153, 0);">
+                <p>Stay connected with us on social media!
+                <br> Facebook | YouTube | Instagram</p>
+            </div>
+        </div>
+    </footer>
 </html>

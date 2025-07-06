@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
-    <title>Login - KhanSama</title>
+    <title>Login</title>
 </head>
     <style>
-        body {
-            background-color: rgb(35, 35, 35);
-            color: white;
+        body {background-color: rgb(35, 35, 35);
+            background-position: right;
+            color: rgb(255, 255, 255);
         }
         .submit-button {
             display: block;
-            margin: 20px auto;
+            margin: 0px auto;
             padding: 10px 20px;
             background-color: rgb(255, 153, 0);
             color: white;
@@ -24,12 +24,12 @@
             cursor: pointer;
         }
         label {
+            text-align: left;
             color: rgb(255, 153, 0);
-            font-size: 24px;
-            margin-bottom: 10px;
+            font-size: 20px;
+            margin: 5px;
         }
         input{
-            width: 80%;
             padding: 10px;
             border-radius: 5px;
             border: 1px solid rgba(0, 0, 0, 5);
@@ -37,17 +37,20 @@
             box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
             color: black;
             font-size: 18px;
-        }
-        div {
-            width: 50%;
-            max-width: 400px;
             align-items: center;
+            margin-bottom: 20px;
+            margin-top: 5px;
+        }
+        .container {
+            width: 60%;
+            max-width: 500px;
+            align-items: flex-start;
             margin: auto;
-            padding: 20px;
+            padding: 10px;
             background-image: url(image/manu\ background.jpg);
             background-size: cover;
             background-position: center;
-            border: 1px solid rgb(255, 153, 0);
+            border: 1px solid rgb(0, 0, 0);
             border-radius: 10px;
             box-shadow: rgba(0, 0, 0, 0.5) 5px 5px 10px;
         }
@@ -55,33 +58,82 @@
             display: flex;
             flex-wrap: wrap;
             flex-direction: column;
-            align-items: center;
-            padding: 20px;
+            padding: 10px;
         }
         ::placeholder{
             font-family: goergia;
         }
-        h1 {
+        select{
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 5);
+            background-color: rgb(255, 255, 255);
+            box-shadow: rgba(0, 0, 0, 0.5) 2px 2px 5px;
+            color: black;
+            padding: 10px;
+            font-family: goergia;
+            font-size: 18px;
+        }
+        h1{
             text-align: center;
             color: rgb(255, 153, 0);
             font-size: 36px;
-            margin-top: 20px;
+        }
+        p, a{
+            text-decoration: none;
+            font-size: 18px;
         }
     </style>
 </head>
-<body>
-<h1>Sign-in to KhanSama</h1>
-    <div>
+    <H1>Login Now</H1>
+    <div class="container">
         <form action="login.html" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" placeholder="Enter your username" required>
-            <br><br>
-            <label for="password">Password:</label>
-        <input type="password" id="password" name="password" placeholder="Enter your password" required>
-        <br><br>
-    <button class="submit-button">Login</button>
-    </form>
+            <div style="width: 100%;">
+                <div>
+                    <div>
+                    <label for="First">Email or Phone Number</label>
+                    </div>
+                    <div>
+                    <input style="width: 95%;" type="email, tel" id="User" name="Fser" placeholder="Enter Email or Phone Number" required>
+                    </div>
+                </div>
+            
+                <div>
+                    <div>
+                    <label for="Password">Password:</label>
+                    </div>
+                    <div>
+                    <input style="width: 95%;" type="password" id="Password" name="Password" placeholder="Enter Password" required>
+                    </div>
+                </div>
+            </div>
+            <button class="submit-button">Login</button>
+        </form>
     </div>
-    <p style="text-align: center; color: white;">Don't have an account? <a href="sign up.html" style="color: rgb(255, 153, 0);">Sign up</a></p>
+    <p style="text-align: center; color: white;">Don't have an account?
+        <a href="sign up.html" style="color: rgb(255, 153, 0);"><strong>Sign Up</strong></a>
+    </p>
 </body>
+<footer style="background-color: rgb(30, 30, 30);
+            box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 20px;">
+        <div style="display: flex;">
+            <div style="width: 40%; padding: 20px; text-align: right;">
+                <h2 style="color: rgb(255, 153, 0);">Contact Us</h2>
+                <hr style="border: none; height: 1px; background-color: rgb(255, 153, 0);">
+                <p>KhanSama, Dhaka, Bangladesh<br>
+                khansama.bangladesh@gmail.com <br>
+                +880 123 456 7890</p>
+            </div>
+            <div>
+                <a href="index.html">
+                    <img src="image/logo.png" alt="Logo">
+                </a>
+            </div>
+            <div style="width: 40%; padding: 20px; text-align: left;">
+                <h2 style="color: rgb(255, 153, 0);">Follow Us</h2>
+                <hr style="border: none; height: 1px; background-color: rgb(255, 153, 0);">
+                <p>Stay connected with us on social media!
+                <br> Facebook | YouTube | Instagram</p>
+            </div>
+        </div>
+    </footer>
 </html>
